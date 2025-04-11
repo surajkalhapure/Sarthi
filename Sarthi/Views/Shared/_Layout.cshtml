@@ -303,9 +303,12 @@
                 <!-- <li><button class="grievance-btn">File Your Grievance</button></li> -->
             </ul>
             <div class="nav-right">
-                <button class="login-btn">Login</button>
-                <button class="register-btn">Register</button>
+                @Html.ActionLink("Login", "Login", "Home", null, new { @class = " login-btn" })
+
+                @Html.ActionLink("Register", "Register", "Home", null, new { @class = " register-btn" })
+
             </div>
+
         </nav>
 
     </header>
@@ -401,7 +404,7 @@
     </div>
 
     <!-- Register Form Modal -->
-    <div id="registerModal" class="modal">
+    <!--<div id="registerModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('registerModal')">&times;</span>
             <h2>Register</h2>
@@ -430,7 +433,7 @@
                 <button type="submit">Register</button>
             </form>
         </div>
-    </div>
+    </div>-->
 
 
 </body>

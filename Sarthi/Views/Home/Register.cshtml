@@ -1,0 +1,123 @@
+﻿@model Sarthi.Models.Register
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+
+
+
+
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            #registerForm {
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+            }
+
+                #registerForm h2 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                margin-top: 15px;
+                font-weight: bold;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="date"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-top: 2px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                box-sizing: border-box;
+            }
+
+            input[type="checkbox"] {
+                margin-top: 15px;
+                margin-right: 5px;
+            }
+
+            button[type="submit"] {
+                width: 100%;
+                padding: 12px;
+                background-color: #007BFF;
+                color: white;
+                font-size: 16px;
+                border: none;
+                border-radius: 6px;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                button[type="submit"]:hover {
+                    background-color: #0056b3;
+                }
+
+            .show-pass-label {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+            }
+        </style>
+        <body>
+            <div>
+                <form id="registerForm">
+                    <h2>Register</h2>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label>
+                        <input type="checkbox" onclick="togglePassword()"> Show Password
+                    </label>
+
+                    <button type="submit">Register</button>
+                </form>
+
+                <script>
+                    function togglePassword() {
+                        const pwd = document.getElementById("password");
+                        pwd.type = pwd.type === "password" ? "text" : "password";
+                    }
+                </script>
+            </div>
+        </body>
+</html>
