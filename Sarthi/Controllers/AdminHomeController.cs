@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace Sarthi.Controllers
 {
-    public class HomeController : Controller
+    public class AdminHomeController : Controller
     {
-        // GET: Home
+        // GET: AdminHome
         public ActionResult Index()
         {
-            
             return View();
         }
     }
