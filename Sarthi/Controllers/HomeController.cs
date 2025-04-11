@@ -11,7 +11,7 @@ namespace Sarthi.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            
+            int a;
             return View();
         }
     }
