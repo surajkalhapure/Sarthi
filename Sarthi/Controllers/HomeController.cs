@@ -14,6 +14,7 @@ namespace Sarthi.Controllers
         public ActionResult Index()
         {
             
+
             return View();
         }
         public ActionResult Register()
